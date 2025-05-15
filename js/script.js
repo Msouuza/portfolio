@@ -10,34 +10,28 @@ document.addEventListener("DOMContentLoaded", function () {
 // fazendo o formulario ser funcional
 
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("form-contato");
-    const mensagem = document.getElementById("mensagem-confirmacao");
+  const form = document.getElementById("form-contato");
+  const mensagem = document.getElementById("mensagem-confirmacao");
 
-    if (form) {
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-        // Mostrar mensagem de sucesso
-        mensagem.innerHTML = "✅ Mensagem enviada com sucesso!";
-        mensagem.style.color = "#00ffaa";
-        mensagem.style.fontWeight = "bold";
+      // Mostrar mensagem de sucesso
+      mensagem.innerHTML = "✅ Mensagem enviada com sucesso!";
+      mensagem.style.color = "#00ffaa";
+      mensagem.style.fontWeight = "bold";
 
-        // Limpar os campos do formulário
-        form.reset();
+      // Limpar os campos do formulário
+      form.reset();
 
-        // Remover a mensagem após alguns segundos
-        setTimeout(() => {
-          mensagem.innerHTML = "";
-        }, 4000);
-      });
-    }
-  });
+      // Remover a mensagem após alguns segundos
+      setTimeout(() => {
+        mensagem.innerHTML = "";
+      }, 4000);
+    });
+  }
+});
 
-  // loading para corrigir o carregamento branco antes do background
 
-    const video = document.querySelector('.video-geral');
-  const loader = document.getElementById('loader');
 
-  video.addEventListener('canplaythrough', () => {
-    loader.style.display = 'none';
-  });
