@@ -32,3 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+
+  // loading para corrigir o carregamento branco antes do background
+
+    const video = document.querySelector('.video-geral');
+  const loader = document.getElementById('loader');
+
+  video.addEventListener('canplaythrough', () => {
+    loader.style.display = 'none';
+  });

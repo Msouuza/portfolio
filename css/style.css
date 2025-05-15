@@ -395,23 +395,23 @@ footer img:hover {
 
 /* loading */
 .loader {
-  border: 8px solid #000000; /* Cor de fundo */
-  border-top: 8px solid #00ffaa; /* Cor da animação */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #00ffaa;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   animation: spin 1s linear infinite;
-  margin: 100px auto; /* Centraliza */
+  z-index: 9999;
+  background-color: black;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 
