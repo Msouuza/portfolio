@@ -10,7 +10,7 @@ html {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  overflow: hidden;
+  overflow: auto;
   perspective: 1000px;
 }
 
